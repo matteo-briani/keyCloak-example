@@ -4,11 +4,13 @@ var Keycloak = require('keycloak-connect');
 var cors = require('cors');
 //var morgan = require('morgan');
 
+var morgan = require('morgan')
 var app = express();
 
 app.use(cors());
 var keycloak = new Keycloak({ store: memoryStore });
 
+app.use(morgan('combined'))
 app.use(keycloak.middleware());
 var memoryStore = new session.MemoryStore();
 
