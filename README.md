@@ -13,6 +13,7 @@ Backend and Frontend have to be ran from the respective directories using:
 npm install
 npm start
 ```
+If the KeyCloak server is not running on localhost, set the ```KC_URL``` env var for the frontend.
 
 ### Docker-compose only !!Not yet ready!!
 Ignore this, a redirection problem occur when starting the backend and the frontend using ```docker-compose``` directly due to the internal docker-compose network.
